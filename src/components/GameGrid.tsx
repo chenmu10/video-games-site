@@ -8,7 +8,7 @@ import GameCardSkeleton from './GameCardSkeleton';
 interface GameGridProps {}
 
 const GameGrid: FC<GameGridProps> = ({}) => {
-  const { games, error, isLoading } = useGames();
+  const { data, error, isLoading } = useGames();
   const skeletons = [1, 2, 3, 4, 5, 6];
   return (
     <>
@@ -20,12 +20,12 @@ const GameGrid: FC<GameGridProps> = ({}) => {
       >
         {isLoading &&
           skeletons.map((s) => (
-            <GameCardContainer>
+            <GameCardContainer key={s}>
               <GameCardSkeleton key={s} />
             </GameCardContainer>
           ))}
-        {games.map((game) => (
-          <GameCardContainer>
+        {data.map((game) => (
+          <GameCardContainer key={game.id}>
             <GameCard key={game.id} game={game} />
           </GameCardContainer>
         ))}

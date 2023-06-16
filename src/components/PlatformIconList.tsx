@@ -1,5 +1,5 @@
-import { HStack, Icon, Text } from '@chakra-ui/react';
-import React, { FC } from 'react';
+import { HStack, Icon } from '@chakra-ui/react';
+import { FC } from 'react';
 import { IconType } from 'react-icons';
 import { BsGlobe } from 'react-icons/bs';
 import {
@@ -33,7 +33,7 @@ const PlatformIconList: FC<PlatformIconListProps> = ({ platforms }) => {
   return (
     <HStack marginY={2}>
       {platforms.map((platform) => (
-        <Icon as={iconMap[platform.slug]} color="gray.500" />
+        <Icon key={platform.id} as={iconMap[platform.slug]} color="gray.500" />
       ))}
     </HStack>
   );
