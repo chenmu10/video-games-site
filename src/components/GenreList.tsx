@@ -10,10 +10,11 @@ import { FC } from 'react';
 import useGenres, { Genre } from '../hooks/useGenres';
 
 interface GenreListProps {
-  onSelectGenre: (genre: Genre)=>void;
+  onSelectGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
 }
 
-const GenreList: FC<GenreListProps> = ({onSelectGenre}) => {
+const GenreList: FC<GenreListProps> = ({ onSelectGenre, selectedGenre }) => {
   const { data, isLoading, error } = useGenres();
   if (error) return null;
   return (
@@ -28,7 +29,11 @@ const GenreList: FC<GenreListProps> = ({onSelectGenre}) => {
                 borderRadius={8}
                 src={genre.image_background}
               />
-              <Button variant="link" onClick={() => onSelectGenre(genre)}>
+              <Button
+                fontWeight={genre.id === selectedGenre?.id ? 'bold':'normal'}
+                variant="link"
+                onClick={() => onSelectGenre(genre)}
+              >
                 {genre.name}
               </Button>
             </HStack>
