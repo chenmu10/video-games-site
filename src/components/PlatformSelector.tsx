@@ -21,7 +21,10 @@ const PlatformSelector: FC<PlatformSelectorProps> = ({
       </MenuButton>
       <MenuList>
         {data.map((platform) => (
-          <MenuItem onClick={() => onSelectedPlatform(platform)}>
+          <MenuItem
+            key={platform.id}
+            onClick={() => onSelectedPlatform(platform)}
+          >
             {platform.name}
           </MenuItem>
         ))}
