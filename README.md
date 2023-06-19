@@ -1,4 +1,4 @@
-# rawg-clone
+# RAWG Clone https://rawg-clone-tau.vercel.app/
 [Rawg.io](https://rawg.io/) basic clone in React
 ![image](https://github.com/chenmu10/rawg-clone/assets/13830519/a5d4dad8-c6d2-4e8e-9c51-49094b41e53e)
 # Technology 
