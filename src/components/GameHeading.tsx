@@ -1,5 +1,5 @@
 import { Heading } from '@chakra-ui/react';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { GameQuery } from '../App';
 
 interface GameHeadingProps {
