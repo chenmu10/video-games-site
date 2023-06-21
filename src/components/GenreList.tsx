@@ -25,7 +25,7 @@ const GenreList: FC<GenreListProps> = ({ onSelectGenre, selectedGenre }) => {
       </Heading>
       <List>
         {isLoading && <Spinner />}
-        {data.map((genre) => (
+        {data?.results.map((genre) => (
           <ListItem key={genre.id} paddingY="5px">
             <HStack>
               <Image
