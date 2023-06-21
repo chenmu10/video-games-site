@@ -12,7 +12,7 @@ import {
 } from 'react-icons/fa';
 import { MdPhoneIphone } from 'react-icons/md';
 import { SiNintendo } from 'react-icons/si';
-import { Platform } from '../hooks/UseGames';
+import { Platform } from '../hooks/UsePlatforms';
 
 interface PlatformIconListProps {
   platforms: Platform[];
