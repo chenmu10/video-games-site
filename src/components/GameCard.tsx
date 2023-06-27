@@ -1,17 +1,19 @@
 import { Card, CardBody, HStack, Heading, Image } from '@chakra-ui/react';
 import { FC } from 'react';
-import { Game } from '../hooks/UseGames';
+import { useNavigate } from 'react-router-dom';
+import { Game } from '../hooks/useGames';
 import { getCroppedImageUrl } from '../services/image-url';
 import CriticScore from './CriticScore';
-import PlatformIconList from './PlatformIconList';
 import Emoji from './Emoji';
+import PlatformIconList from './PlatformIconList';
 interface GameCardProps {
   game: Game;
 }
 
 const GameCard: FC<GameCardProps> = ({ game }) => {
+  const navigate = useNavigate();
   return (
-    <Card>
+    <Card onClick={() => navigate(`/game/${game.slug}`)}>
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <HStack justifyContent={'space-between'} marginBottom={3}>
