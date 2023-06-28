@@ -1,7 +1,7 @@
 import { Card, CardBody, HStack, Heading, Image } from '@chakra-ui/react';
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Game } from '../Entities/Game';
+import Game from '../Entities/Game';
 import { getCroppedImageUrl } from '../services/image-url';
 import CriticScore from './CriticScore';
 import Emoji from './Emoji';

@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import ms from 'ms';
-import { Platform } from '../Entities/Platform';
+import Platform from '../Entities/Platform';
 import platformsResponse from '../data/platforms';
 import APIClient from '../services/api-client';
 
