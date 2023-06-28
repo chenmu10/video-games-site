@@ -5,7 +5,7 @@ import APIClient, { FetchResponse } from '../services/api-client';
 import useGameQueryStore from '../store';
 
 const apiClient = new APIClient<Game>('/games');
-const useGames = () => {
+export const useGames = () => {
   const gameQuery = useGameQueryStore((s) => s.gameQuery);
   return useInfiniteQuery<FetchResponse<Game>, Error>({
     queryKey: ['games', gameQuery],
@@ -25,6 +25,3 @@ const useGames = () => {
     staleTime: ms('24h'),
   });
 };
-
-
-export default useGames;
