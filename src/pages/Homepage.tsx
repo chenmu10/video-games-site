@@ -29,8 +29,8 @@ function Homepage() {
             <PlatformSelector />
             <SortSelector />
           </HStack>
+          <GameGrid />
         </Box>
-        <GameGrid />
       </GridItem>
     </Grid>
   );
