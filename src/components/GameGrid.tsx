@@ -6,7 +6,7 @@ import GameCardContainer from './GameCardContainer';
 import GameCardSkeleton from './GameCardSkeleton';
 import { FetchResponse } from '../services/api-client';
 import Game from '../Entities/Game';
-import { useGames } from '../hooks/useGames';
+import  useGames  from '../hooks/useGames';
 
 const GameGrid: FC = () => {
   const { data, error, isLoading, fetchNextPage, hasNextPage } = useGames();
